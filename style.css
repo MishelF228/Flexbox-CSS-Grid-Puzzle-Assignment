@@ -1,0 +1,48 @@
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+  gap: 20px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: auto;
+  font-family: sans-serif;
+}
+
+header {
+  grid-area: header;
+  text-align: center;
+}
+
+main {
+  grid-area: main;
+}
+
+footer {
+  grid-area: footer;
+  text-align: center;
+}
+
+/* Контейнер пазла — теперь Grid 4x3 */
+.puzzle-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 столбца одинаковой ширины */
+  grid-template-rows: auto;              /* строки по содержимому */
+  gap: 4px;
+  justify-items: center;
+}
+
+/* Изображения — адаптируются по ширине, сохраняют пропорции */
+.puzzle-container img {
+  width: 100%;       /* занимает ширину ячейки */
+  height: auto;      /* высота автоматически рассчитывается */
+  border: 1px solid #ccc;
+  display: block;
+}
+
+/* Скрытый дефектный фрагмент */
+.hidden-piece {
+  display: none;
+}
